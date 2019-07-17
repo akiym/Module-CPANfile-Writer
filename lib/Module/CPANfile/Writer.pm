@@ -144,6 +144,9 @@ sub _remove_prereqs {
         [ relationship => $re_cpanfile_prereq ],
         '(?&PerlOWS) \(? (?&PerlOWS)',
         [ module => '(?&PerlString)' ],
+        # TODO PerlCall doesn't have `;`
+        #'.*?',
+        #';'
     ] => sub {
         my ($m) = @_;
         my $relationship = $m->submatches->{relationship}->text;

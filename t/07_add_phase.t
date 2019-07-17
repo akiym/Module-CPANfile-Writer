@@ -13,7 +13,7 @@ on develop => sub {
     # comment
 };
 
-on 'build' => sub {
+on build => sub {
 };
 
 requires 'C';
@@ -32,7 +32,7 @@ on develop => sub {
     # comment
 };
 
-on 'build' => sub {
+on build => sub {
     requires 'E';
 };
 
